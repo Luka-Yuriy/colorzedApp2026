@@ -30,8 +30,7 @@ class ViewController: UIViewController {
     }
     
     //MARK: IBActions
-
-    @IBAction func rgbSlider(_ sender: UISlider) {
+    @IBAction func rgbSliderAction(_ sender: UISlider) {
         setBackgroundColor()
         switch sender {
         case redSlider:
@@ -70,6 +69,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
-
-
