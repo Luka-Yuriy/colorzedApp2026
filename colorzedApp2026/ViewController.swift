@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     //MARK: IBOutlets
     @IBOutlet var colorizedView: UIView!
     
@@ -28,7 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundColor()
-        setValueForRGBLabel()
+        rgbSlidersAction()
+        colorizedView.layer.cornerRadius = 12
     }
     
     //MARK: IBActions
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         setBackgroundColor()
     }
     
-    @IBAction func setValueForRGBLabel() {
+    @IBAction func rgbSlidersAction() {
         redValueLabel.text = (String(format: "%.2f", redSlider.value))
         greenValueLabel.text = (String(format: "%.2f", greenSlider.value))
         blueValueLabel.text = (String(format: "%.2f", blueSlider.value))
